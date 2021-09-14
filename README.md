@@ -45,4 +45,7 @@ Files.createDirectories(Path.of("C:\\diretorio-01"));
 *  Caso o novo arquivo 'newPath' já exista, então irá lançar uma `java.nio.file.FileAlreadyExistsException`
 */
 Files.copy(path1, newPath);
+
+// Subscreve o arquivo 'newPath' caso ele já existir. Fazendo com que não lance mais uma Exception.
+Files.copy(path1, newPath, StandardCopyOption.REPLACE_EXISTING);
 ```

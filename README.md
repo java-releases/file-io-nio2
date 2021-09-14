@@ -15,4 +15,10 @@
   - Para qualquer outro cenário, será considerado `caminho relativo`;
 - File System Symbols:
   - `.` Uma referência ao diretório corrente;
-  - `..` Uma referência ao parent do diretório corrente;   
+  - `..` Uma referência ao parent do diretório corrente;
+```java
+/**
+*  Retorna TRUE se os arquivos forem os mesmos. Caso contrário lança uma `java.nio.file.NoSuchFileException`
+*/
+Files.isSameFile(path01, path02);
+```

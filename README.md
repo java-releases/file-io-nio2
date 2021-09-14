@@ -16,9 +16,17 @@
 - File System Symbols:
   - `.` Uma referência ao diretório corrente;
   - `..` Uma referência ao parent do diretório corrente;
+
 ```java
 /**
 *  Retorna TRUE se os arquivos forem os mesmos. Caso contrário lança uma `java.nio.file.NoSuchFileException`
 */
 Files.isSameFile(path01, path02);
+```
+
+```java
+/**
+*  Cria um diretório. Caso o mesmo já existir, então lança uma `java.nio.file.FileAlreadyExistsException`
+*/
+Files.createDirectory(Path.of("C:\\diretorio-01"));
 ```

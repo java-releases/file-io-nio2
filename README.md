@@ -13,3 +13,6 @@
   - Se inicia com '/' barra, será considerado `caminho absoluto`;
   - Se inicia com 'c:' (a letra do driver), então será considerado `caminho absoluto`;
   - Para qualquer outro cenário, será considerado `caminho relativo`;
+- File System Symbols:
+  - `.` Uma referência ao diretório corrente;
+  - `..` Uma referência ao parent do diretório corrente;   

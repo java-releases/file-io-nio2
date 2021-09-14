@@ -40,7 +40,7 @@ Files.createDirectories(Path.of("C:\\diretorio-01"));
 
 ```java
 /**
-*  Copia um arquivo. Exemplo: de path1, para newPath.
+*  Copia um arquivo ou diretório(sem conteúdo). Exemplo: de path1, para newPath.
 *  Caso o arquivo informado 'path1' não exista, então irá lançar uma `java.nio.file.NoSuchFileException`
 *  Caso o novo arquivo 'newPath' já exista, então irá lançar uma `java.nio.file.FileAlreadyExistsException`
 */

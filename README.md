@@ -30,3 +30,10 @@ Files.isSameFile(path01, path02);
 */
 Files.createDirectory(Path.of("C:\\diretorio-01"));
 ```
+
+```java
+/**
+*  Cria um diretório. Caso o mesmo já existir, então não irá acontecer nada.
+*/
+Files.createDirectories(Path.of("C:\\diretorio-01"));
+```

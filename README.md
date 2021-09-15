@@ -65,4 +65,7 @@ Files.move(path1, path2);
 
 // Subscreve o 'arquivoNew' caso o mesmo já existir
 Files.move(arquivo, arquivoNew, StandardCopyOption.REPLACE_EXISTING);
+
+// Garante que nunca irá visualizar o processo de move/rename de maneira incompleta
+Files.move(arquivo1, arquivo2, StandardCopyOption.ATOMIC_MOVE);
 ```

@@ -16,7 +16,7 @@ public class Exemplo4 {
 
 		Path diretorio = Paths.get("d3");
 		try {
-			// Files.delete(diretorio);
+			Files.delete(diretorio);
 			boolean deletou = Files.deleteIfExists(diretorio);
 			System.out.println("deletou ? " + deletou);
 		} catch (IOException e) {

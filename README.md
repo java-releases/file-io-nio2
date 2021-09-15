@@ -53,3 +53,13 @@ Files.copy(path1, newPath, StandardCopyOption.REPLACE_EXISTING);
 // Copia arquivo e exibe todo conteúdo no console
 Files.copy(path1, System.out);
 ```
+
+```java
+/**
+*  Se informar 2 diretórios, então irá renomear o 'path1' com o novo 'path2'
+*  Se informar 2 arquivos, então irá mover o 'path1' para o 'path2'
+*  Se o 'path1' não existir, então lança uma java.nio.file.NoSuchFileException
+*  Se o 'path2' já existir, então lança uma java.nio.file.FileAlreadyExistsException
+*/
+Files.move(path1, path2);
+```

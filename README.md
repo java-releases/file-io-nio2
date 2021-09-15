@@ -83,5 +83,5 @@ Files.deleteIfExists(path)
 *  Lista todos os arquivos que estão dentro do diretório informado.
 *  Se o diretorio informado não for um diretório, então lança uma java.nio.file.NotDirectoryException
 */
-Files.list(diretorio);
+Files.list(diretorio) Stream<Path>;
 ```

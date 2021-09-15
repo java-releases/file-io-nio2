@@ -46,10 +46,10 @@ Files.createDirectories(Path.of("C:\\diretorio-01"));
 Files.copy(path1, newPath);
 
 // Subscreve o arquivo 'newPath' caso ele já existir. Fazendo com que não lance mais uma Exception.
-Files.copy(path1, newPath, StandardCopyOption.REPLACE_EXISTING);
+Files.copy(path1, newPath, StandardCopyOption.REPLACE_EXISTING) long;
 
 // Copia arquivo e exibe todo conteúdo no console
-Files.copy(path1, System.out);
+Files.copy(path1, System.out) long;
 ```
 
 ```java

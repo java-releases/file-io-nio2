@@ -50,6 +50,7 @@ Paths.get("/meuDiretorio/outroDiretorio");// class
 ```
 
 <hr>
+<br/><br/>
 
 > ### Usar a classe Files para verificar, excluir, copiar ou mover um arquivo ou diretório:
 ```java
@@ -112,6 +113,7 @@ Files.deleteIfExists(path) boolean;
 ```
 
 <hr>
+<br/><br/>
 
 > ### Usar Stream API com arquivos:
 ```java

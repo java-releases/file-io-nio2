@@ -8,6 +8,8 @@
 - Usar a classe Files para verificar, excluir, copiar ou mover um arquivo ou diretório;
 - Usar Stream API com arquivos;
 
+<hr>
+
 ### Resumo
 - Em termos da prova a definição de Path será:
   - Se inicia com '/' barra, será considerado `caminho absoluto`;
@@ -17,7 +19,9 @@
   - `.` Uma referência ao diretório corrente;
   - `..` Uma referência ao parent do diretório corrente;
 
-### Usar a classe Files para verificar, excluir, copiar ou mover um arquivo ou diretório:
+<hr>
+
+> ### Usar a classe Files para verificar, excluir, copiar ou mover um arquivo ou diretório:
 ```java
 /**
 *  Cria um diretório. Caso o mesmo já existir, então lança uma `java.nio.file.FileAlreadyExistsException`
@@ -77,7 +81,9 @@ Files.delete(path);
 Files.deleteIfExists(path)
 ```
 
-### Usar Stream API com arquivos:
+<hr>
+
+> ### Usar Stream API com arquivos:
 ```java
 /**
 *  Lista todos os arquivos que estão dentro do diretório informado.

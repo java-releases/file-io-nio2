@@ -115,6 +115,7 @@ Files.walk(d, maxDepth) Stream<Path>;
 */
 Files.walk(path) Stream<Path>;
 ```
+
 ```java
 /**
 * Assim como o walk(), também é realizada uma busca, porém mais específica.
@@ -123,4 +124,11 @@ Files.walk(path) Stream<Path>;
 Files.find(directory, 
       maxDepth, 
       (path, basicFileAttributes) -> path.toString().endsWith(".txt") && basicFileAttributes.size() > minimoSize) Stream<Path>;
+```
+
+```java
+/**
+* Lê as linhas sem armazenar em memória.
+*/
+Files.lines(path) Stream<String>;
 ```

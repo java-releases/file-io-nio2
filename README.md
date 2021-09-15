@@ -48,4 +48,7 @@ Files.copy(path1, newPath);
 
 // Subscreve o arquivo 'newPath' caso ele já existir. Fazendo com que não lance mais uma Exception.
 Files.copy(path1, newPath, StandardCopyOption.REPLACE_EXISTING);
+
+// Copia arquivo e exibe todo conteúdo no console
+Files.copy(path1, System.out);
 ```

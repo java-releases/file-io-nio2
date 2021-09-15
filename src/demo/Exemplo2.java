@@ -8,6 +8,11 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
 
+/**
+ * 
+ * Copiando e criando arquivos diretorios
+ *
+ */
 public class Exemplo2 {
 
 	public static void main(String[] args) {
@@ -18,8 +23,8 @@ public class Exemplo2 {
 		boolean diretorioExiste = Files.exists(Path.of("C:\\ocpjp-study\\file-io-nio2\\src\\demo\\arquivos"));
 		System.out.println("Diretorio existe: " + diretorioExiste);
 
-		Path path01 = Path.of("C:\\ocpjp-study\\file-io-nio2\\src\\demo\\arquivos\\arquivo01.txt");
-		Path path02 = Path.of("C:\\ocpjp-study\\file-io-nio2\\src\\demo\\arquivos\\arquivo01.txt");
+		Path path01 = Path.of("./src/demo/arquivos/arquivo01.txt");
+		Path path02 = Path.of("./src/demo/arquivos/arquivo01.txt");
 
 		try {
 			boolean saoMesmoArquivos = Files.isSameFile(path01, path02);
@@ -30,7 +35,7 @@ public class Exemplo2 {
 		System.out.println();
 
 		try {
-			Files.createDirectory(Path.of("C:\\ocpjp-study\\file-io-nio2\\src\\demo\\arquivos\\diretorio-01"));
+			Files.createDirectory(Path.of("diretorio-01"));
 		} catch (IOException e) {
 		}
 
@@ -53,7 +58,7 @@ public class Exemplo2 {
 		// Copiando arquivos com I/O Stream
 		try {
 			var is = new FileInputStream("C:\\ocpjp-study\\file-io-nio2\\src\\demo\\arquivos\\arquivo01.txt");
-			Files.copy(is, Paths.get("C:\\ocpjp-study\\file-io-nio2\\src\\demo\\arquivos\\arquivo3.txt"), StandardCopyOption.REPLACE_EXISTING);
+			Files.copy(is, Paths.get("C:\\ocpjp-study\\file-io-nio2\\src\\demo\\arquivos\\arquivo3.txt"),StandardCopyOption.REPLACE_EXISTING);
 			Files.copy(Paths.get("C:\\ocpjp-study\\file-io-nio2\\src\\demo\\arquivos\\arquivo4.txt"), System.out);
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
@@ -62,7 +67,17 @@ public class Exemplo2 {
 		}
 
 		// Copiando arquivos em um diretório
-		
+		var file = Paths.get("java.txt");
+		var diretorio = Paths.get("./novo-diretorio/java-copy.java");
+		//////////////////////////////////////////////
+		var file2 = Paths.get("java.txt");
+		var diretorio2 = Paths.get("./diretorio-02").resolve(file2.getFileName());
+		try {
+			//Files.copy(file, diretorio);
+			Files.copy(file2, diretorio2);
+			System.out.println("Tudo certo!");
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
-
 }

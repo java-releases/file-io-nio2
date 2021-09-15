@@ -69,3 +69,13 @@ Files.move(arquivo, arquivoNew, StandardCopyOption.REPLACE_EXISTING);
 // Garante que nunca irá visualizar o processo de move/rename de maneira incompleta
 Files.move(arquivo1, arquivo2, StandardCopyOption.ATOMIC_MOVE);
 ```
+
+```java
+/**
+*
+*  Se o 'path' (diretório/arquivo) não existir, então lança uma java.nio.file.NoSuchFileException
+*  Se o 'path' for um diretório com arquivos, então lança uma java.nio.file.DirectoryNotEmptyException
+*/
+Files.delete(path);
+```
+

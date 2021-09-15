@@ -120,5 +120,7 @@ Files.walk(path) Stream<Path>;
 * Assim como o walk(), também é realizada uma busca, porém mais específica.
 * Exemplo: Buscando todos os arquivos que tenhas a extensão ".txt" e com um mínimos de tamanho.
 */
-Files.find(directory, maxDepth, (path, basicFileAttributes) -> path.toString().endsWith(".txt") && basicFileAttributes.size() > minimoSize) Stream<Path>;
+Files.find(directory, 
+            maxDepth, 
+            (path, basicFileAttributes) -> path.toString().endsWith(".txt") && basicFileAttributes.size() > minimoSize) Stream<Path>;
 ```

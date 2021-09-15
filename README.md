@@ -99,4 +99,10 @@ Files.list(diretorio) Stream<Path>;
 *  Se informar com 'path' um arquivo, irá retornar o Path desse arquivo.
 */
 Files.walk(path) Stream<Path>;
+
+// maxDepth: É o máximo de profundidade que pode entrar nas pastas. 
+// Se maxDepth == 0 então nenhuma. 
+// Se maxDepth == 1 então pasta corrente. 
+// Se maxDepth < 0 então lança uma java.lang.IllegalArgumentException: 'maxDepth' is negative.
+Files.walk(d, maxDepth) Stream<Path>;
 ```

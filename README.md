@@ -59,13 +59,13 @@ Files.copy(path1, System.out) long;
 *  Se o 'path1' não existir, então lança uma java.nio.file.NoSuchFileException
 *  Se o 'path2' já existir, então lança uma java.nio.file.FileAlreadyExistsException
 */
-Files.move(path1, path2);
+Files.move(path1, path2) Path;
 
 // Subscreve o 'arquivoNew' caso o mesmo já existir
-Files.move(arquivo, arquivoNew, StandardCopyOption.REPLACE_EXISTING);
+Files.move(arquivo, arquivoNew, StandardCopyOption.REPLACE_EXISTING) Path;
 
 // Garante que nunca irá visualizar o processo de move/rename de maneira incompleta
-Files.move(arquivo1, arquivo2, StandardCopyOption.ATOMIC_MOVE);
+Files.move(arquivo1, arquivo2, StandardCopyOption.ATOMIC_MOVE) Path;
 ```
 
 ```java

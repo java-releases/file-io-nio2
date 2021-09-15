@@ -74,11 +74,11 @@ Files.move(arquivo1, arquivo2, StandardCopyOption.ATOMIC_MOVE) Path;
 *  Se o 'path' (diretório/arquivo) não existir, então lança uma java.nio.file.NoSuchFileException
 *  Se o 'path' for um diretório e não estiver vazio, então lança uma java.nio.file.DirectoryNotEmptyException
 */
-Files.delete(path);
+Files.delete(path) void;
 
 // Se o 'path' (diretório) não estiver vazio, então lança uma java.nio.file.DirectoryNotEmptyException
 // Se conseguir deletar retorna TRUE, senão retorna FALSE
-Files.deleteIfExists(path)
+Files.deleteIfExists(path) boolean;
 ```
 
 <hr>

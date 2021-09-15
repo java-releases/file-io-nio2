@@ -40,6 +40,15 @@ Path.of("C:", "meuDiretorio", "teste", "src", "meuArquivo.txt");// interface
 Paths.get("C:\\meuDiretorio\\teste\\meuArquivo.txt");// class
 ```
 
+```java
+/**
+*  Cria referencia para um caminho absoluto (baseado em linux ou mac):
+*/
+Path.of("/meuDiretorio/outroDiretorio");// interface
+Path.of("/", "meuDiretorio", "outroDiretorio");// interface
+Paths.get("/meuDiretorio/outroDiretorio");// class
+```
+
 <hr>
 
 > ### Usar a classe Files para verificar, excluir, copiar ou mover um arquivo ou diretório:

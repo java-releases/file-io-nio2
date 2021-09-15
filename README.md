@@ -17,13 +17,7 @@
   - `.` Uma referência ao diretório corrente;
   - `..` Uma referência ao parent do diretório corrente;
 
-```java
-/**
-*  Retorna TRUE se os arquivos forem os mesmos. Caso contrário lança uma `java.nio.file.NoSuchFileException`
-*/
-Files.isSameFile(path01, path02);
-```
-
+### Usar a classe Files para verificar, excluir, copiar ou mover um arquivo ou diretório:
 ```java
 /**
 *  Cria um diretório. Caso o mesmo já existir, então lança uma `java.nio.file.FileAlreadyExistsException`
@@ -83,3 +77,11 @@ Files.delete(path);
 Files.deleteIfExists(path)
 ```
 
+### Usar Stream API com arquivos:
+```java
+/**
+*  Lista todos os arquivos que estão dentro do diretório informado.
+*  Se o diretorio informado não for um diretório, então lança uma java.nio.file.NotDirectoryException
+*/
+Files.list(diretorio);
+```

@@ -21,6 +21,18 @@
 
 <hr>
 
+> ### Usar a interface Path para operar em caminhos de arquivos e diretórios:
+```java
+/**
+*  Cria referencia para um caminho relativo:
+*/
+Path.of("meuDiretorio/meuArquivo.txt");// interface
+Path.of("meuDiretorio", "meuArquivo.txt");// interface
+Paths.get("meuDiretorio/meuArquivo.txt");// class
+```
+
+<hr>
+
 > ### Usar a classe Files para verificar, excluir, copiar ou mover um arquivo ou diretório:
 ```java
 /**

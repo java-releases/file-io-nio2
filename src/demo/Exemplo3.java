@@ -8,10 +8,10 @@ import java.nio.file.StandardCopyOption;
 
 /**
  * 
- * Mover arquivos
+ * Mover e renomear arquivos/diretorios
  *
  */
-public class Exemplo03 {
+public class Exemplo3 {
 
 	public static void main(String[] args) {
 

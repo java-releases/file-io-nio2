@@ -62,7 +62,7 @@ Files.createDirectory(Path.of("C:\\diretorio-01"));
 
 ```java
 /**
-*  Cria um diretório. Caso o mesmo já existir, então não irá acontecer nada.
+*  Cria um ou mais diretórios (sub pastas caso não existam). Caso o mesmo já existir, então não irá acontecer nada.
 */
 Files.createDirectories(Path.of("C:\\diretorio-01"));
 ```

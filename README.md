@@ -55,7 +55,9 @@ Paths.get("/meuDiretorio/outroDiretorio");// class
 > ### Usar a classe Files para verificar, excluir, copiar ou mover um arquivo ou diretório:
 ```java
 /**
-*  Cria um diretório. Caso o mesmo já existir, então lança uma `java.nio.file.FileAlreadyExistsException`.
+*  Cria um diretório. 
+*  Caso o mesmo já existir, então lança uma `java.nio.file.FileAlreadyExistsException`.
+*  Caso informar vários diretórios encadeados que não existam, então irá lançar uma `java.nio.file.NoSuchFileException`.
 */
 Files.createDirectory(Path.of("C:\\diretorio-01"));
 ```

@@ -143,15 +143,6 @@ Files.walk(d, maxDepth) Stream<Path>;
 
 ```java
 /**
-*  Caminha por todos os diretorios para dentro, a partir do 'path' diretório informado.
-*  Se o diretório não existir, então lança uma java.nio.file.NoSuchFileException.
-*  Se informar com 'path' um arquivo, irá retornar o Path desse arquivo.
-*/
-Files.walk(path) Stream<Path>;
-```
-
-```java
-/**
 * Assim como o walk(), também é realizada uma busca, porém mais específica.
 * Exemplo: Buscando todos os arquivos que tenhas a extensão ".txt" e com um mínimos de tamanho.
 */

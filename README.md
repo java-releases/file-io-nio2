@@ -56,7 +56,18 @@ Paths.get("/meuDiretorio/outroDiretorio");// class
 Path diretorio = Path.of("/home/ortiz");
 Path classes = Path.of("/home/ortiz/demo/Dog.java");
 Path pathToClass = diretorio.relativize(classes);
-System.out.println(pathToClass); // demo\Dog.java
+System.out.println(pathToClass); ---> demo\Dog.java
+```
+
+```java
+/**
+*  O normalize é quando removemos os "." (pontos) desnecessarios e, passamos a acessar o diretorio diretamente, sem o uso de pontos.
+*/
+String diretorio = "/home/dev/ortiz/teste";
+String arquivo = "../../Cat.java";
+Path path = Path.of(diretorio, arquivo);
+System.out.println(path); ---> \home\dev\ortiz\teste\..\..\Cat.java 
+System.out.println(path.normalize()); ---> \home\dev\Cat.java
 ```
 
 <hr>

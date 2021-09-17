@@ -179,3 +179,13 @@ Files.find(directory,
 */
 Files.lines(path) Stream<String>;
 ```
+
+```java
+/**
+* LinkOption para visualizar use: BasicFileAttributes, PosixFileAttributes, DosFileAttributes.
+* LinkOption para editar use: BasicFileAttributesView, PosixFileAttributesView, DosFileAttributesView
+* LinkOption para definir dono do arquivo: FileOwnerAttributeView
+* LinkOption para config. avançadas: AclFileAttributeView
+*/
+public static <A extends BasicFileAttributes> A readAttributes(Path path, Class<A> type, LinkOption... options) throws IOException
+```

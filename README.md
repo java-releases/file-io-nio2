@@ -61,6 +61,13 @@ System.out.println(pathToClass); // demo\Dog.java
 
 ```java
 /**
+*  Outra opção para se criar um Path
+*/
+Path FileSystems.getDefault().getPath("opa/outro/isso");
+```
+
+```java
+/**
 *  O normalize é quando removemos os "." (pontos) desnecessarios e, passamos a acessar o diretorio diretamente,
 * sem o uso de pontos.
 */

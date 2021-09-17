@@ -49,6 +49,16 @@ Path.of("/", "meuDiretorio", "outroDiretorio");// interface
 Paths.get("/meuDiretorio/outroDiretorio");// class
 ```
 
+```java
+/**
+*  O relativize é responsável por eliminar o conteúdo em comum entre 2 paths
+*/
+Path diretorio = Path.of("/home/ortiz");
+Path classes = Path.of("/home/ortiz/demo/Dog.java");
+Path pathToClass = diretorio.relativize(classes);
+System.out.println(pathToClass); // demo\Dog.java
+```
+
 <hr>
 <br/><br/>
 

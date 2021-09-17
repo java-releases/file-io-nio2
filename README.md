@@ -20,7 +20,7 @@
   - `..` Uma referência ao parent do diretório corrente;
 - Vantagens de usar Files.lines(), ao invés de Files.readAllLines();
   - Pode rodar com pouca memória disponível;
-  - Pode trabalhar com programação funcional, usando filter()e map() diretamente;
+  - Pode trabalhar com programação funcional, usando filter() e map() diretamente;
 
 
 <hr>

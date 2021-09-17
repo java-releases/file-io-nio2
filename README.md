@@ -56,18 +56,19 @@ Paths.get("/meuDiretorio/outroDiretorio");// class
 Path diretorio = Path.of("/home/ortiz");
 Path classes = Path.of("/home/ortiz/demo/Dog.java");
 Path pathToClass = diretorio.relativize(classes);
-System.out.println(pathToClass); ---> demo\Dog.java
+System.out.println(pathToClass); // demo\Dog.java
 ```
 
 ```java
 /**
-*  O normalize é quando removemos os "." (pontos) desnecessarios e, passamos a acessar o diretorio diretamente, sem o uso de pontos.
+*  O normalize é quando removemos os "." (pontos) desnecessarios e, passamos a acessar o diretorio diretamente,
+* sem o uso de pontos.
 */
 String diretorio = "/home/dev/ortiz/teste";
 String arquivo = "../../Cat.java";
 Path path = Path.of(diretorio, arquivo);
-System.out.println(path); ---> \home\dev\ortiz\teste\..\..\Cat.java 
-System.out.println(path.normalize()); ---> \home\dev\Cat.java
+System.out.println(path); // \home\dev\ortiz\teste\..\..\Cat.java 
+System.out.println(path.normalize()); // \home\dev\Cat.java
 ```
 
 <hr>
@@ -80,14 +81,14 @@ System.out.println(path.normalize()); ---> \home\dev\Cat.java
 *  Caso o mesmo já existir, então lança uma `java.nio.file.FileAlreadyExistsException`.
 *  Caso informar vários diretórios encadeados que não existam, então irá lançar uma `java.nio.file.NoSuchFileException`.
 */
-Files.createDirectory(Path.of("C:\\diretorio-01"));
+Path Files.createDirectory(Path.of("C:\\diretorio-01")) throws IOException;
 ```
 
 ```java
 /**
 *  Cria um ou mais diretórios (sub pastas caso não existam). Caso o mesmo já existir, então não irá acontecer nada.
 */
-Files.createDirectories(Path.of("C:\\diretorio-01"));
+Path Files.createDirectories(Path.of("C:\\diretorio-01")) throws IOException;
 ```
 
 ```java

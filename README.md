@@ -11,17 +11,23 @@
 <hr>
 
 ### Resumo
+
 - Em termos da prova a definição de Path será:
   - Se inicia com '/' barra, será considerado `caminho absoluto`;
   - Se inicia com 'c:' (a letra do driver), então será considerado `caminho absoluto`;
   - Para qualquer outro cenário, será considerado `caminho relativo`;
+
 - File System Symbols:
   - `.` Uma referência ao diretório corrente;
   - `..` Uma referência ao parent do diretório corrente;
-- Vantagens de usar Files.lines(), ao invés de Files.readAllLines();
+- Vantagens de usar Files.lines(), ao invés de Files.readAllLines():
   - Pode rodar com pouca memória disponível;
   - Pode trabalhar com programação funcional, usando filter() e map() diretamente;
 
+- Vantagens de usar Files.readAttributes():
+  - Faz menos viagens de ida e volta para o sistema de arquivos.
+  - Pode ser usado para acessar atributos dependentes do sistema de arquivos.
+  - Para a leitura de vários atributos, costuma ter mais desempenho.
 
 <hr>
 

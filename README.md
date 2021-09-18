@@ -193,6 +193,14 @@ Files.lines(path) Stream<String>;
 
 ```java
 /**
+* Verifica se os 2 paths são os mesmos.
+* O 1º 'path' sempre severá existir, caso contrário irá lançar uma java.nio.file.NoSuchFileException
+*/
+public static boolean isSameFile(Path path, Path path2) throws IOException;
+```
+ 
+```java
+/**
 * LinkOption para visualizar use: BasicFileAttributes, PosixFileAttributes, DosFileAttributes.
 * LinkOption para editar use: BasicFileAttributesView, PosixFileAttributesView, DosFileAttributesView
 * LinkOption para definir dono do arquivo: FileOwnerAttributeView

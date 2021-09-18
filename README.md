@@ -198,6 +198,10 @@ Files.lines(path) Stream<String>;
 ```
 
 ```java
+public static List<String> readAllLines(Path path) throws IOException {}
+```
+
+```java
 /**
 * Verifica se os 2 paths são os mesmos.
 * O 1º 'path' sempre severá existir, caso contrário irá lançar uma java.nio.file.NoSuchFileException

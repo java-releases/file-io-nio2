@@ -14,7 +14,7 @@
 
 - Em termos da prova a definição de Path será:
   - Se inicia com '/' barra, será considerado `caminho absoluto`;
-  - Se inicia com 'c:' (a letra do driver), então será considerado `caminho absoluto`;
+  - Se inicia com 'C:' (a letra do driver), então será considerado `caminho absoluto`;
   - Para qualquer outro cenário, será considerado `caminho relativo`;
 
 - File System Symbols:

@@ -1,5 +1,3 @@
-![](https://github.com/ocpjp-study/file-io-nio2/blob/main/file-io-nio2.png)
-
 ### Tópico: File-io-nio2
 ### Objetivos
 - Usar a interface Path para operar em caminhos de arquivos e diretórios;
